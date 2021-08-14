@@ -1,0 +1,21 @@
+main {
+  min-height: 80vh;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Icons */
+.headerIcon {
+  padding: 0 5px;
+}
+
+/* Rating Star */
+.rating span {
+  margin: 0.1rem;
+}
