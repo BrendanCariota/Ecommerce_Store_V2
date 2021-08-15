@@ -19,3 +19,9 @@ a {
 .rating span {
   margin: 0.1rem;
 }
+
+/* Full Width Button */
+.btn-block {
+  display: block;
+  width: 100%;
+}
