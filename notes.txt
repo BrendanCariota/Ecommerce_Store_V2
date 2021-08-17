@@ -1,0 +1,5 @@
+JSON (JSON WEB TOKENS)
+- To generate a token we will create a function
+- We will pass this function a specific users ID we want to generate a token for
+- We will return that value and set it equal to the token property when we authorize or user
+- Next we will need to create a custom middleware to check that token on routes we want protected
