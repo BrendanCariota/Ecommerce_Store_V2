@@ -32,6 +32,7 @@ const Header = () => {
                   <i className="fas fa-shopping-cart headerIcon"></i>Cart
                 </Nav.Link>
               </LinkContainer>
+              {/* If User is signed in show a dropdown with options */}
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="username">
                   <LinkContainer to="/profile">
@@ -42,11 +43,26 @@ const Header = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
+                // If no User is signed in show sign in button
                 <LinkContainer to="/login">
                   <Nav.Link>
                     <i className="fas fa-user headerIcon"></i>Sign In
                   </Nav.Link>
                 </LinkContainer>
+              )}
+              {/* If User is Signed AND is Admin show admin options */}
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown title="Admin" id="adminmenu">
+                  <LinkContainer to="/admin/userlist">
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/productlist">
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/admin/orderlist">
+                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                  </LinkContainer>
+                </NavDropdown>
               )}
             </Nav>
           </Navbar.Collapse>
